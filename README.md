@@ -23,7 +23,7 @@ _____<img src="https://user-images.githubusercontent.com/55695328/131248853-9b72
 ## Features include:
 * Data Binding
 * MVVM Architecture
-* Coroutines Scope for background work
+* Coroutines for background work
 * Room Database for saving register's information
 * Retrofit library for Rest API calling
 * GSON Builder
