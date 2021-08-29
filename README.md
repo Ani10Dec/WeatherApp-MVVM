@@ -38,4 +38,4 @@ _____<img src="https://user-images.githubusercontent.com/55695328/131248853-9b72
 
 
 ## Download
-Get the lates stable app from my [releases page](https://github.com/Ani10Dec/WeatherApp-MVVM/releases)
+Get the latest stable version app from my [releases page](https://github.com/Ani10Dec/WeatherApp-MVVM/releases)
