@@ -30,5 +30,9 @@ _____<img src="https://user-images.githubusercontent.com/55695328/131248853-9b72
 * Logging Interceptor
 * Picasso library
 
+## REST API
+* Postal Pincode Api
+* Weather Api
+
 ## Download
 Get the app from our [releases page](https://github.com/Ani10Dec/WeatherApp-MVVM/releases)
