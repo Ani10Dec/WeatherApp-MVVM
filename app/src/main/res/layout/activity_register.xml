@@ -122,46 +122,57 @@
                         android:text="@={viewModel.inputGender}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ll_dob"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/date_picker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableEnd="@drawable/ic_calender"
-                        android:focusable="false"
-                        android:hint="@string/dob"
-                        android:inputType="none"
-                        android:singleLine="true"
-                        android:text="@={viewModel.inputDOB}" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ll_age"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="110dp"
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/ll_dob"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/ll_dob">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                    android:baselineAligned="false">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_age"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ll_dob"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:focusable="false"
-                        android:hint="@string/age"
-                        android:text="@={viewModel.inputAge}" />
+                        android:layout_weight="7">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/date_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_calender"
+                            android:focusable="false"
+                            android:hint="@string/dob"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:text="@={viewModel.inputDOB}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ll_age"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:hint="@string/age"
+                            android:text="@={viewModel.inputAge}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ll_address_1"
@@ -169,7 +180,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="25dp"
-                    app:layout_constraintTop_toBottomOf="@+id/ll_age">
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_address_line_1"
