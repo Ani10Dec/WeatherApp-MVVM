@@ -12,7 +12,7 @@ _____<img src="https://user-images.githubusercontent.com/55695328/131248853-9b72
 * https://user-images.githubusercontent.com/55695328/131248853-9b722163-ab24-4150-9152-9c446c295289.jpeg
 
 ## App Language
-* Pure Kotlin
+* Kotlin
 
 ## Activity Includes
 * Splash Screen
