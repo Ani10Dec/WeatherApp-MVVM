@@ -31,8 +31,8 @@ _____<img src="https://user-images.githubusercontent.com/55695328/131248853-9b72
 * Picasso library
 
 ## REST API
-* Postal Pincode Api
-* Weather Api
+* Postal Pincode Api ( https://api.postalpincode.in/pincode/{pincode} )
+* Weather Api ( https://www.weatherapi.com/api-explorer.aspx )
 
 ## Download
 Get the app from our [releases page](https://github.com/Ani10Dec/WeatherApp-MVVM/releases)
