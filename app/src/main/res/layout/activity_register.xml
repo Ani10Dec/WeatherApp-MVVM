@@ -68,7 +68,6 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:boxStrokeErrorColor="@android:color/holo_red_dark"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -127,11 +126,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="10"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-                    android:baselineAligned="false">
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/ll_dob"
@@ -158,8 +157,8 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
                         android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
                         android:layout_weight="3.5">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -212,38 +211,49 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ll_pincode"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll_address_2">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_pinCode"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pincCde"
-                        android:inputType="number"
-                        android:maxLength="6"
-                        android:singleLine="true"
-                        android:text="@={viewModel.inputPinCode}" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ll_pincode"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="6">
 
-                <Button
-                    android:id="@+id/btn_pin_check"
-                    android:layout_width="150dp"
-                    android:layout_height="55dp"
-                    android:backgroundTint="#DAD4D4"
-                    android:text="@string/check"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/ll_pincode"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/ll_pincode" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_pinCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pincCde"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:singleLine="true"
+                            android:text="@={viewModel.inputPinCode}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_pin_check"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="#DAD4D4"
+                        android:text="@string/check"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -255,7 +265,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ll_pincode" />
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
                 <TextView
                     android:id="@+id/tv_district"
